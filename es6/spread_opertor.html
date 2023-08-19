@@ -1,0 +1,68 @@
+<html>
+    <head></head>
+    <title>Spread Operator</title>
+    <body>
+    <h1>Spread Operator</h1>
+    <script type="text/javascript">
+    const q1 = ["Jan", "Feb", "Mar"];
+    const q2 = ["Apr", "May", "Jun"];
+    const q3 = ["Jul", "Aug", "Sep"];
+    const q4 = ["Oct", "Nov", "Dec"];
+     
+    // const year = ["Jan", "Feb", "Mar","Apr", "May", "Jun","Jul", "Aug", "Sep","Oct", "Nov", "Dec"];
+    // let year = [];
+
+
+    // for(let i =0; i<q1.length;i++){
+    //     year.push(q1[i]);
+    // }
+    // for(let i =0; i<q2.length;i++){
+    //     year.push(q2[i]);
+    // }
+    // for(let i =0; i<q3.length;i++){
+    //     year.push(q3[i]);
+    // }
+    // for(let i =0; i<q4.length;i++){
+    //     year.push(q4[i]);
+    // }
+    // console.log(year);
+
+    const year = [...q1, ...q2, ...q3, ...q4];
+    // console.log(year);
+
+
+    const personal = {name:'Ritesh',mobile:'9897520',email:'demo@gmail.com'};
+    const address = {city:'Nagpur',state:'MH', pincode:89797};
+    // const data = {...personal, ...address};
+    //  console.log("personal",personal);
+    
+
+     const numbers = [800,23,55,21,87,56,755];
+     
+    let tempNumber; 
+    //  for(let i=0; i<numbers.length; i++){
+    //      tempNumber = numbers[i];
+    //     if(tempNumber<numbers[i+1]){
+    //         tempNumber = numbers[i+1];
+    //     }
+    //  }
+    //  tempNumber =  Math.max(...numbers);
+     tempNumber =  Math.max(...numbers);
+     console.log("tempNumber",tempNumber);
+
+
+     const getMaxNumber = (...num)=>{
+        let max=0;
+        for(let i=0; i<numbers.length; i++){
+            let temp = numbers[i];
+            if(max<temp){
+                max = temp;
+            }
+        }
+        return max;
+     }
+
+     console.log("getMaxNumber",getMaxNumber(...numbers))
+    </script>
+    </body>
+</html>
