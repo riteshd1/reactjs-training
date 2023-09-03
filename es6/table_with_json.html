@@ -1,0 +1,66 @@
+<html>
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+  <title>Navbar Template for Bootstrap</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/navbars/">
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+</head>
+<body>
+    <div class="container p-4">
+    <div class="col-4 p-2">
+        <input type="text" id="search" placeholder="Search.." class="form-control" onkeyup="search(this.value)" />
+    </div>
+    <div class="col">
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+                  
+        </tbody>
+      </table>
+    </div>
+    </div>
+    <script src="users.js"></script>
+    <script type="text/javascript">
+    const search = (searchString)=>{
+        console.log("searchString",searchString);
+        let newUsers = users.filter(item=>{
+            if(item.email.toLowerCase().startsWith(searchString.toLowerCase())){
+                return item;
+            }
+        })
+        displayTableRows(newUsers);
+    }
+    function displayTableRows(users){
+        let rows = '';
+        users.map((item,index)=>{
+            let address = item.address;
+            let addressString = item.address.street+', '+item.address.city+', '+item.address.zipcode;
+            rows += '<tr><th scope="row">'+(index+1)+'</th><td>'+item.name+'</td><td>'+item.email+'</td><td>'+item.phone+'</td></tr>'
+            rows += '<tr><td></td><td colspan="3">Address: '+addressString+'</td></tr>';
+        
+        })
+        //  rows = '<tr><th scope="row">1</th><td>Mark</td><td>Otto</td><td>@mdo</td></tr>';
+        //  rows += '<tr><td></td><td colspan="3">Address: Ram nagar Nagpur</td></tr>';
+        
+          document.getElementById('table-body').innerHTML = rows; 
+    }
+    displayTableRows(users);
+    </script>
+</body>
+</html>
