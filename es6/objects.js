@@ -61,4 +61,36 @@ Object.seal(users);
 users.user1={};
 delete users.user1;
  console.log(users);
- 
+
+HTML:
+CSS:
+Boostrap:
+Javscript Basic:
+
+Javascript Advance:
+Object:
+entries
+keys
+values
+freez
+seal 
+hasOwnProperty
+isFrozen
+isSealed
+
+Array:
+length(),
+map,
+filter,
+reduce,
+spread operator,
+splice,
+push 
+pop
+
+String:
+str_replace
+startsWith
+length
+substr
+concat
