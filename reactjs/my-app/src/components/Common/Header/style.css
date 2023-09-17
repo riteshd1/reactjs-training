@@ -1,0 +1,7 @@
+button{
+    background-color: rgb(21, 207, 240) !important;
+    color:#fff !important;
+}
+.active{
+    color:red !important
+}

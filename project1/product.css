@@ -1,0 +1,43 @@
+.watch-red {
+  background-color: #9f1929;
+  border-color: #9f1929;
+}
+.watch-black {
+  background-color: #4d4d4d;
+  border-color: #4d4d4d;
+}
+.watch-white {
+  background-color: #dfd6cb;
+  border-color: #dfd6cb;
+}
+.watch-blue {
+  background-color: #5e697a;
+  border-color: #5e697a;
+}
+.watch-green {
+  background-color: #596652;
+  border-color: #596652;
+}
+.dial {
+    width: 170px;
+    padding-top: 4%;
+    position: absolute;
+    top: 32.4%;
+    left: 5%;
+    border-radius: 16%;
+    height: 209px;
+    font-size: 1.5rem;
+}
+.heart {
+  display: none;
+  
+}
+.heart .fa-heart-pulse {
+  font-size: 4rem;
+  color: #ff0000;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+	10% {transform: scale(1.1)}
+}
