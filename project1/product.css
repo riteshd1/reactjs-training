@@ -19,18 +19,17 @@
   border-color: #596652;
 }
 .dial {
-    width: 170px;
-    padding-top: 4%;
-    position: absolute;
-    top: 32.4%;
-    left: 5%;
-    border-radius: 16%;
-    height: 209px;
-    font-size: 1.5rem;
+  width: 170px;
+  padding-top: 4%;
+  position: absolute;
+  top: 32.4%;
+  left: 5%;
+  border-radius: 16%;
+  height: 209px;
+  font-size: 1.5rem;
 }
 .heart {
   display: none;
-  
 }
 .heart .fa-heart-pulse {
   font-size: 4rem;
@@ -39,5 +38,25 @@
 }
 
 @keyframes pulse {
-	10% {transform: scale(1.1)}
+  10% {
+    transform: scale(1.1);
+  }
+}
+
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+  .dial {
+    padding-top: 12%;
+    top: 20.99%;
+    left: 28.5%;
+  }
+}
+
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 955px) and (orientation: landscape) {
+  .dial {
+    padding-top: 7%;
+    top: 57.4%;
+    left: 8.6%;
+  }
 }
