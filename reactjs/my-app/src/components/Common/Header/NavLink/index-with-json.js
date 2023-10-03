@@ -15,7 +15,7 @@ function NavLink(){
         {
             title:'Disabled',
             path:'/disabled',
-            active:'disabled'
+            active:''
         },
         {
             title:'My Menu',

@@ -16,10 +16,12 @@
 
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -238,6 +240,7 @@
         <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
             <div class="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
                 <div class="my-3 py-3 align-items-center">
+                    <img src="images/watch-red.jpeg" class="watch-image" />
                     <div class="dial text-bg-dark">
                         <div class="timer">
                             <span id="hours">11</span>
@@ -248,10 +251,10 @@
                         </div>
                         <div class="heart">
                             <i class="fa-solid fa-heart-pulse"></i>
-                            <p id="heart-rate">78</p>                            
+                            <p id="heart-rate">78</p>
                         </div>
                     </div>
-                    <img src="images/watch-red.jpeg" class="watch-image" />
+                    
                 </div>
             </div>
             <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
@@ -286,24 +289,24 @@
 
     </main>
 
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-        
-    <script type="text/javascript">
-        const changeWatchFeature =(feature)=>{
-            document.querySelector('.heart').style.display='none';
-            document.querySelector('.timer').style.display='none';
-           
-            document.querySelector('.'+feature).style.display='block';
 
-            if(feature=='heart'){
+    <script type="text/javascript">
+        const changeWatchFeature = (feature) => {
+            document.querySelector('.heart').style.display = 'none';
+            document.querySelector('.timer').style.display = 'none';
+
+            document.querySelector('.' + feature).style.display = 'block';
+
+            if (feature == 'heart') {
                 const randomNumber = Math.random() * (100 - 60) + 60;
                 document.querySelector("#heart-rate").innerHTML = Math.floor(randomNumber);
             }
             //    document.querySelector('.heart').style.display='none';
-            
+
         }
         const changeWatchColor = (color) => {
             console.log("changeWatchColor", color)

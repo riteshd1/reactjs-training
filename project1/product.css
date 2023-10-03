@@ -11,8 +11,8 @@
   border-color: #dfd6cb;
 }
 .watch-blue {
-  background-color: #5e697a;
-  border-color: #5e697a;
+  background-color: #576476;
+  border-color: #576476;
 }
 .watch-green {
   background-color: #596652;
@@ -44,19 +44,32 @@
 }
 
 /* For Mobile Portrait View */
-@media screen and (max-device-width: 480px) and (orientation: portrait) {
+/* @media screen and (max-device-width: 480px) and (orientation: portrait) {
   .dial {
     padding-top: 12%;
     top: 20.99%;
     left: 28.5%;
   }
-}
+} */
 
 /* For Mobile Landscape View */
-@media screen and (max-device-width: 955px) and (orientation: landscape) {
+/* @media screen and (max-device-width: 955px) and (orientation: landscape) {
   .dial {
     padding-top: 7%;
     top: 57.4%;
     left: 8.6%;
   }
-}
+} */
+/* .dial{
+    margin-top: -34.5vh;
+    margin-bottom: 10vh;
+    margin-left: 23vw;
+    width: 170px;
+    padding-top: 17%;
+    position: relative;
+    /* top: 32.4%; */
+    /* left: 5%; */
+    border-radius: 16%;
+    height: 209px;
+    font-size: 1.5rem;
+} */

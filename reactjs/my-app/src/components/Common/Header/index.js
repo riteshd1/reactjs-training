@@ -23,9 +23,9 @@ function Header() {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <NavLink title="Home" active="active" path="/home" />
             
-            <NavLink title="Link" path="/link" />
+            <NavLink title="About" path="/about" />
             
-            <NavLink title="Disabled" path="/disabled" active="disabled" />
+            <NavLink title="Contact" path="/contact" active="" />
             
 
             {/* <li className="nav-item dropdown">
