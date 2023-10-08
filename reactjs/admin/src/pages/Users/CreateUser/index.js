@@ -1,6 +1,8 @@
 import React,{useState} from "react";
-
+let renderCount =0;
 const CreateUser = () => {
+  renderCount=renderCount+1;
+  console.log("renderCount:",renderCount);
     // let name = "TheTools";
     // const setName=(newVal)=>{
     //     name=newVal;
@@ -26,12 +28,14 @@ const CreateUser = () => {
         // console.log("event.target.value",event.target.value);
         let courses = Array.isArray(formData?.courses)?formData?.courses:[];
         courses.push(event.target.value);
-        setFormData({...formData,[event.target.name]:courses})
+         setFormData({...formData,[event.target.name]:courses})
       }else{
-       setFormData({...formData,[event.target.name]:event.target.value})
+        setFormData({...formData,[event.target.name]:event.target.value})
       }
+      // formData[event.target.name]=event.target.value;
+      console.log("formData inside",formData)
      }
-    console.log("formData",formData)
+    console.log("formData outside",formData)
   return (
     <div className="container-fluid">
 

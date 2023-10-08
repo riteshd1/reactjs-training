@@ -32,6 +32,12 @@ const Sidebar = () => {
           </Link>
         </li>
         <li className="nav-item">
+          <Link className="nav-link" to="/posts">
+            <i className="fas fa-fw fa-tachometer-alt"></i>
+            <span>Posts</span>
+          </Link>
+        </li>
+        <li className="nav-item">
           <Link className="nav-link" to="/users">
             <i className="fas fa-fw fa-tachometer-alt"></i>
             <span>Users</span>
