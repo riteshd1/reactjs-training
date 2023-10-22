@@ -1,5 +1,8 @@
 import React from "react";
+import LayoutContext from "../../context/LayoutContext";
 const TopBar = () => {
+  let contextState = React.useContext(LayoutContext);
+  console.log("contextState",contextState);
   return (
     <>
       <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
@@ -71,6 +74,20 @@ const TopBar = () => {
           </li>
 
           {/* <!-- Nav Item - Alerts --> */}
+          <li className="nav-item dropdown no-arrow mx-1">
+            <a
+              className="nav-link dropdown-toggle"
+              href="#"
+              id="alertsDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              onClick={()=>contextState.setTheme("dark")}
+            >
+              <i className="fas fa-moon fa-fw"></i>
+            </a>
+            </li>
           <li className="nav-item dropdown no-arrow mx-1">
             <a
               className="nav-link dropdown-toggle"

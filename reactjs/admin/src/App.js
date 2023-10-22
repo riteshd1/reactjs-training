@@ -10,9 +10,14 @@ import ErrorPage from "./pages/ErrorPage";
 import CreateUser from "./pages/Users/CreateUser";
 import Posts from "./pages/Posts";
 import Post from "./pages/Post";
+import LayoutContext from "./context/LayoutContext";
+import { useState } from "react";
 function App() {
+  const [theme, setTheme] = useState("light");
+  console.log("theme in App component",theme);
   return (
     <BrowserRouter>
+    <LayoutContext.Provider value={{theme:theme,setTheme:setTheme}}>
     <div id="wrapper">
       <Sidebar />
       <div id="content-wrapper" className="d-flex flex-column">
@@ -39,7 +44,7 @@ function App() {
       <Footer />
       </div>
       </div>
-      
+      </LayoutContext.Provider>
     </BrowserRouter>
   );
 }

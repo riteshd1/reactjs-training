@@ -1,0 +1,25 @@
+API website: https://www.thecocktaildb.com/api.php
+
+List the categories, glasses, ingredients or alcoholic filters
+
+http://www.thecocktaildb.com/api/json/v1/1/list.php?c=list
+http://www.thecocktaildb.com/api/json/v1/1/list.php?g=list
+http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list
+http://www.thecocktaildb.com/api/json/v1/1/list.php?a=list
+
+G - Glasses
+C- Category
+I - Ingredients
+A - Alcoholic
+    Non alcoholic
+    Optional alcohol
+
+
+
+
+
+Alcolholic
+http://www.thecocktaildb.com/api/json/v1/1/list.php?a=list
+
+Lookup full cocktail details by id
+www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007
