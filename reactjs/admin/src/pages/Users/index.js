@@ -1,13 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,  } from "react";
 import { Link } from "react-router-dom";
 
 const Users = () => {
   // let resultData = [];
-  let [counter, setCounter] = useState(2);
+  const counterRef = React.useRef();
+  let [counter, setCounter] = useState();
   let [resultData, setResultData] = useState([]);
+  // const increaseCount = ()=>{
+  //   counter = counter+1;
+  //   setCounter(counter)
+  // }
   const increaseCount = ()=>{
-    counter = counter+1;
-    setCounter(counter)
+    let newVal = parseInt(counterRef.current.innerHTML) + 1;
+    counterRef.current.innerHTML = newVal;
+     setCounter(newVal);
+    // alert("currentVal:"+currentVal);
   }
 
   const getUsers =  async ()=>{
@@ -30,8 +37,10 @@ const Users = () => {
   }
   
   useEffect(()=>{
-    getUsers()
-  },[])
+    if(!resultData.length && counter){
+      getUsers();
+    }
+  },[counter]);
   // getUsers();
   // console.log("resultData",resultData)
   return (
@@ -52,7 +61,7 @@ const Users = () => {
             <Link to="/create-user" className="btn btn-primary">
               Create User
             </Link>
-            <h3>Count : {counter}</h3>
+            <h3>Count : <p ref={counterRef}>0</p></h3>
             <button onClick={()=>increaseCount()} className="btn btn-danger" >Increment</button>
           </div>
           <div className="card-body">

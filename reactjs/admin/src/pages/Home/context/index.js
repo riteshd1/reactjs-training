@@ -1,6 +1,6 @@
 import React from "react";
 
-const componentContext = React.createContext({country:'India'});
+const componentContext = React.createContext();
 
 
 export default componentContext;

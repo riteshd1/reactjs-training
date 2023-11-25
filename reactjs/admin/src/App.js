@@ -12,6 +12,7 @@ import Posts from "./pages/Posts";
 import Post from "./pages/Post";
 import LayoutContext from "./context/LayoutContext";
 import { useState } from "react";
+import UseMemoExample from "./pages/UseMemoExample";
 function App() {
   const [theme, setTheme] = useState("light");
   console.log("theme in App component",theme);
@@ -32,6 +33,7 @@ function App() {
             <Route path="users/create-user" element={<CreateUser />} />
             <Route path="create-user"  element={<CreateUser />} />
             <Route path="posts"  element={<Posts />} />
+            <Route path="use-memo-example"  element={<UseMemoExample />} />
             {/* <Route path="post/:id/:title/:body"  element={<Post />} /> */}
             <Route path="post/:id"  element={<Post />} />
             {/* <Route path="post/:id"  element={<Post />} /> */}

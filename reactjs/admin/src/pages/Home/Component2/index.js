@@ -8,6 +8,7 @@ const data = React.useContext(ComponentContext);
     <div className="container-fluid">
       <h1>Component2</h1>
       <h4>Country : {data.countryName}</h4>
+      <h4>Name : {data.name}</h4>
       <Component3  />
     </div>
   );

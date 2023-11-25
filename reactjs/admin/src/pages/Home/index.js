@@ -17,7 +17,7 @@ setCountry(e.target.value);
     }
   }
   return (
-    <ComponentContext.Provider value={{countryName:country}}>
+    <ComponentContext.Provider value={{countryName:country,name:'Ritesh'}}>
     <div className="container-fluid">
       {error?<p class="text-danger">{error}</p>:""}
       <input type="text" name="country" value={country} onChange={changeCountryValue} />

@@ -1,0 +1,19 @@
+Context
+
+1. Create a file to create a Context
+  const MyContext = React.createContext();
+  export default MyContext;
+
+2. Higher Order Component (HOC)
+ import MyContext from "./MyContext.js";
+
+ <MyContext.Provider value={{name:'value'}}>
+
+    <Home />
+ </MyContext.Provider>
+
+ 3. <COmponent1 />
+
+ import MyContext from "./MyContext.js";
+
+ const data = React.useContext(MyContext);

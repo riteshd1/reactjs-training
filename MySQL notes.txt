@@ -1,0 +1,20 @@
+CHAR       - letter or number or symbols
+VARCHAR     - letter or number or symbols
+
+CHAR   1        10      
+VARCHAR 5       65,535
+TEXT            65,535 
+
+
+INT             
+TINYINT 
+
+DECIMAL 
+FLOAT
+
+
+1970-01-01
+
+DATE        2023-11-05
+DATETIME    2023-11-05 11:31:05
+TIMESTAMP   126416464 
