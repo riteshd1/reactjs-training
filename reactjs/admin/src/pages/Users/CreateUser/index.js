@@ -36,11 +36,29 @@ const CreateUser = () => {
       console.log("formData inside",formData)
      }
     console.log("formData outside",formData)
+
+    const submitForm = (e)=>{
+      e.preventDefault();
+      console.log("formData",formData);
+      let requestOptions = {
+        method: "POST",
+        body:formData
+      };
+       let apiURL = `http://localhost:1234/createUser?name=${formData.name}&dob=${formData.dob}&phone=${formData.mobile}&email=${formData.email}&gender=${formData.gender}`;
+      //let apiURL = `http://localhost:1234/createUser`;
+      fetch(apiURL, requestOptions)
+        .then((res) => res.json())
+        .then((result) => {
+          alert("result"+result);
+          console.log("result", result);
+        })
+        .catch((error) => console.log("error", error));
+    }
   return (
     <div className="container-fluid">
 
       <h1 className="h3 mb-2 text-gray-800">Create User</h1>
-      <form>
+      <form method="post" onSubmit={submitForm}>
         <div className="form-group row">
           <label for="inputPassword" className="col-sm-2 col-form-label">
             Name
@@ -139,7 +157,7 @@ const CreateUser = () => {
             />
           </div>
         </div>
-        <div className="form-group row">
+        {/* <div className="form-group row">
           <label for="inputPassword" className="col-sm-2 col-form-label">
             Gender
           </label>
@@ -184,7 +202,7 @@ const CreateUser = () => {
               </label>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="text-center">
             
             <input type="submit" value="Create" className="btn btn-primary m-2" />
